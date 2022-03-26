@@ -4,14 +4,11 @@ provider "aws" {
 }
 
 
-resource "aws_s3_bucket" "test-bucket-bianco" {
-  bucket = "my-tf-test-bucket"
-  acl    = "private"
+resource "aws_instance" "app_server" {
+  ami           = "ami-830c94e3"
+  instance_type = "t2.micro"
 
   tags = {
-    Name        = "Meu Primeiro Bucket S3"
-    Environment = "Dev"
-
-    
+    Name = "ExampleAppServerInstance"
   }
 }
