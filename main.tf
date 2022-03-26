@@ -1,6 +1,7 @@
-Provider "AWS" {
-  region = "eu-central-1"
-  }
+provider "aws" {
+  profile = "default"
+  region  = "us-east-1"
+}
 
 
 resource "aws_s3_bucket" "test-bucket-bianco" {
