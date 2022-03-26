@@ -8,8 +8,9 @@ resource "aws_s3_bucket" "test-bucket-bianco" {
   acl    = "private"
 
   tags = {
-    Name        = "My bucket"
+    Name        = "Meu Primeiro Bucket S3"
     Environment = "Dev"
+
     
   }
 }
